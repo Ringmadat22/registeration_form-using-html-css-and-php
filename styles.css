@@ -6,11 +6,11 @@
 }
 
 body {
-    background-color: aliceblue;
+    background-color: green;
 }
 
 head {
-    background-color: gray;
+    background-color: inherit;
 }
 
 nav {
@@ -18,21 +18,54 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: inherit;
+    border: 1px solid #fff;
+    padding: 20px 10px;
+}
+
+h3 {
+    white-space: nowrap;
+    margin: 30px 0;
+    animation: move 10s linear infinite;
+    position: relative;
+}
+
+@keyframes  move{
+    from {
+        transform: translateX(150%);
+    }
+    to {
+        transform: translateX(-150%);
+    }
 }
 
 header {
     text-align: center;
-    padding: 30px;
+    padding: 0px 0;
+    border: 1px solid #fff;
+    width: 100%;
+}
+
+h1 {
+    padding: 10px 0;
+    border: 1px solid #fff;
+    color: red;
+}
+
+.header {
+width: 100%;
 }
 
 h2 {
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
+    background-color: pink;
+    width: 100%;
+    border: 1px solid black;
 }
 
 main {
-    background-color: aliceblue;
+    background-color: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,40 +74,46 @@ main {
 }
 
 .container {
-    width: 80%;
-    background-color: aliceblue;
+    width: 100%;
+    background-color: rgb(0, 157, 255);
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
+.container > form > div {
+    display: flex;
+    border: 1px solid green;
+    justify-content: left;
+    align-items: center;
+    background-color: yellow;
+    padding: 2px 0;
+}
+
 form {
-    width: 300px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 form label {
-    margin-bottom: 5px ;
     font-size: 0.8rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-right:1px solid black;
+    background-color: inherit;
+    padding: 10px 100px 10px 5px;
+    width: 200px;
 }
 
-form input {
+form input, form select {
     padding: 10px 15px;
-    margin-bottom: 15px;
+    width: 400px;
+    margin-bottom: 0;
     border: 1px solid rgb(204, 200, 200);
     outline: none;
     transition: all ease 0.3s;
     border-radius: 5px;
     font-size: 0.8rem;
-}
-
-form select {
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    border: 1px solid rgb(204, 200, 200);
-    outline: none;
-    transition: all ease 0.3s;
-    border-radius: 5px;
-    font-size: 0.8rem; 
 }

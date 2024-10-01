@@ -3,60 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTERATION SYSTEM</title>
+    <title>Registeration System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <header>
             <h1>MAJOR GENERAL MULUGETA BULI POLYTECHNIC COLLEGE</h1>
+            <div class="header">
+                <h2>Online Registeration Form</h2>
+            </div>
         </header>
     </nav>
     <main>
-        <div class="header">
-            <h2>Online Registeration Form</h2>
-        </div>
-        <main>
-            <div class="container">
-                <form action="">
+        <h3>STUDENT REGISTERATION OF MAJOR GENERAL MULUGETA BULI POLYTECHNIC COLLEGE</h3>
+        <div class="container">
+            <form action="process_registration.php" method="POST">
+                <div>
                     <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" >
+                    <input type="text" name="first_name" required>
+                </div>
+
+                <div>
                     <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name">
+                    <input type="text" name="last_name" required>
+                </div>
+                <div>
                     <label for="date_of_birth">Date Of Birth</label>
-                    <input type="datetime" name="date_of_birth">
+                    <input type="date" name="date_of_birth" required>
+                </div>
+                <div>
                     <label for="email">Email Address</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
+                </div>
+                <div>
                     <label for="country">Country</label>
-                    <select name="country" value="country">
+                    <select name="country" required>
                         <option>Ethiopia</option>
                         <option>South Sudan</option>
                         <option>Kenya</option>
                         <option>Uganda</option>
                         <option>Rwanda</option>
                     </select>
+                </div>
+                <div>
                     <label for="region">Region</label>
-                    <select name="region" value="country">
+                    <select name="region" required>
                         <option>Addis Ababa</option>
                         <option>Hawasa</option>
                         <option>Jima</option>
                     </select>
+                </div>
+                <div>
                     <label for="address">Address</label>
                     <input type="text" name="address">
+                </div>
+                <div>
                     <label for="age">Age</label>
-                    <input type="number" name="age">
+                    <input type="number" name="age" required>
+                </div>
+                <div>
                     <label for="course">Course</label>
-                    <select name="course">
+                    <select name="course" required>
                         <option>IT</option>
                         <option>HNS</option>
                         <option>HTML</option>
                     </select>
+                </div>
+                <div>
                     <label for="phone">Phone Number</label>
-                    <input type="text" name="phone">
-                    <input type="submit" value="Register">
-                </form>
-            </div>
-        </main>
+                    <input type="text" name="phone" required>
+                </div>
+                <div>
+                    <input type="checkbox" name="agree" id="checkbox" required>
+                    <label for="checkbox">Do you agree with the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>?</label>
+                </div>
+                <input type="submit" value="Register">
+            </form>
+        </div>
     </main>
 </body>
 </html>
